@@ -31,11 +31,6 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 [Register with Philantro](https://www.philantro.com/sign-up)
 
 
-
-== Nonprofits ==
-
-Test.
-
 == Installation ==
 
 To begin, your organization must be registered with [Philantro](https://www.philantro.com) for our plugin to work as expected. By default, a test organization is preloaded so you can see experience our plugin before registering.
