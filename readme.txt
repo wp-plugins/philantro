@@ -26,9 +26,9 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 
 
 = For more information =
-[Philantro](https://www.philantro.com)
-[Try Philantro](https://www.philantro.com/try-it)
-[Register with Philantro](https://www.philantro.com/sign-up)
+"[Philantro](https://www.philantro.com)"
+"[Try Philantro](https://www.philantro.com/try-it)"
+"[Register with Philantro](https://www.philantro.com/sign-up)"
 
 
 
