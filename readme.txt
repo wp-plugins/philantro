@@ -47,3 +47,4 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 3. Screenshot of the Philantro donate process.
 4. Screenshot of the Philantro donate process at the billing stage.
 5. Screenshot of a completed donation.
+6. Philantro's nonprofit dashboard. When you register with Philantro, your nonprofit has access to insightful reporting, analytics and tools and more. Get Started.
