@@ -34,10 +34,18 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 
 == Installation ==
 
+To begin, your organization must be registered with [Philantro](https://www.philantro.com) for our plugin to work as expected. By default, a test organization is preloaded so you can see experience our plugin before registering.
+
 1. Install Philantro for WordPress either via the WordPress.org plugin directory, or by uploading the files to your server in the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Add the 9 digit EIN of your organization (ex. 453910202) to the settings (Admin > Philantro) and save.
 4. That's it. You're ready to go!
+
+
+= For more information =
+[Philantro](https://www.philantro.com),
+[Try Philantro](https://www.philantro.com/try-it),
+[Register with Philantro](https://www.philantro.com/sign-up)
 
 
 == Screenshots ==
