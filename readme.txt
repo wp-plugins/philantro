@@ -11,7 +11,7 @@ Integrate Philantro's donation platform to add the ability to accept donation an
 
 == Description ==
 
-Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin for WordPress adds the required javascript snippet to integrate the Philantro donation platform. Accept donations securely, sales event tickets, track donation and more. The Philantro plugin requires the organization to be registered with Philantro.
+Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin for WordPress adds the required javascript snippet to integrate the Philantro donation platform. Accept donations securely, sell event tickets, track donations/donors and more. The Philantro plugin requires the organization to be registered with Philantro.
 
 
 = Nonprofits Grow with Philantro =
@@ -22,12 +22,12 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 * Fast, next-day deposits. Your funds are deposited directly in your verified bank account on the next business day.
 * Insightful reporting and analytics like never before. On your Philantro dashboard, find everything from donor conversion rates, gender breakdowns, social network contribution and more!
 * Donor management is all inclusive. Donor records are automatically built and updated with each donation so you can see the names used, addresses used, track the largest, first and last gift and more.
-* This is just the beginning! Learn more at [Philantro.com](https://www.philantro.com).
+* This is just the beginning, learn more at [Philantro.com](https://www.philantro.com).
 
 
 = For more information =
-[Philantro](https://www.philantro.com)
-[Try Philantro](https://www.philantro.com/try-it)
+[Philantro](https://www.philantro.com), 
+[Try Philantro](https://www.philantro.com/try-it), 
 [Register with Philantro](https://www.philantro.com/sign-up)
 
 
