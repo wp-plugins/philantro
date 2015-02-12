@@ -37,16 +37,18 @@ To begin, your organization must be registered with [Philantro](https://www.phil
 
 = Set Up In Seconds =
 
-1. Install Philantro for WordPress either via the WordPress.org plugin directory, or by uploading the files to your server in the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Add the 9 digit EIN of your organization (ex. 453910202) to the settings (Admin > Philantro) and save.
-4. That's it. You're ready to go!
+>1. Install Philantro for WordPress either via the WordPress.org plugin directory, or by uploading the files to your server in the `/wp-content/plugins/` directory.
+>2. Activate the plugin through the 'Plugins' menu in WordPress
+>3. Add the 9 digit EIN of your organization (ex. 453910202) to the settings (Admin > Philantro) and save.
+>4. That's it. You're ready to go!
 
 
 = How To Show The Donation Form =
 
-1. Use `/#_givealways/` as the link - Simple. 
-2. Please refer to the screenshots if you're a more visual learner.
+>1. Use `#_givealways` as the link - Simple. 
+>2. Please refer to the screenshots if you're a more visual learner.
+
+![Alt text](//ps.w.org/philantro/assets/screenshot-1.jpg)
 
 
 = For more information =
