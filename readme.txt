@@ -45,7 +45,7 @@ To begin, your organization must be registered with [Philantro](https://www.phil
 
 = How To Show The Donation Form =
 
->1. Use `#_givealways` as the link.
+>Use `#_givealways` as the link.
 
 
 
