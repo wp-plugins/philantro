@@ -17,7 +17,7 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 = Nonprofits Grow with Philantro =
 
 >* Accept donations directly on your website; [Philantro](https://www.philantro.com) works on any website.
->* Run multiple campaigns. Donors can select a campaign to give to directly from your donation form. Each campaign also has it's on direct link and form.
+>* Run multiple campaigns. Donors can select a campaign to give to directly from your donation form. Each campaign also has it's own direct link and form.
 >* Sell tickets to your organization's events, set reminders and validate tickets at the door.
 >* Fast, next-day deposits. Your funds are deposited directly in your verified bank account on the next business day.
 >* Insightful reporting and analytics like never before. On your Philantro dashboard, find everything from donor conversion rates, gender breakdowns, social network contribution and more!
@@ -29,7 +29,7 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 [Philantro](https://www.philantro.com), 
 [Try Philantro](https://www.philantro.com/try-it), 
 [Register with Philantro](https://www.philantro.com/sign-up)
-
+ 
 
 == Installation ==
 
@@ -39,8 +39,8 @@ To begin, your organization must be registered with [Philantro](https://www.phil
 
 >1. Install Philantro for WordPress either via the WordPress.org plugin directory, or by uploading the files to your server in the `/wp-content/plugins/` directory.
 >2. Activate the plugin through the 'Plugins' menu in WordPress
->3. Add the 9 digit EIN of your organization sto the settings and save.
->4. That's it. You're ready to go!
+>3. Add the 9 digit EIN of your organization to the settings and save.
+>4. That's it. You're ready to go! 
 
 
 = How To Show The Donation Form =
