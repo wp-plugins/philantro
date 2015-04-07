@@ -44,7 +44,7 @@ function philantro() {
         s.type = "text/javascript";
         s.src = "//s3-us-west-2.amazonaws.com/philantro/pdf/philantro.js";
         s.async = true;
-        window.options = { EIN: <?php echo $EIN ?>, Referrer: URI};
+        window.options = { EIN: '<?php echo $EIN ?>', Referrer: URI};
         head.appendChild(s);
     </script>
 <?php
