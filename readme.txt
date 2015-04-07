@@ -5,7 +5,7 @@ Requires at least: 2.7
 Tested up to: 4.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 
 Integrate Philantro's donation platform to add the ability to accept donation and more on your website. Official Philantro plugin.
 

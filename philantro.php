@@ -3,7 +3,7 @@
  * Plugin Name: Philantro
  * Plugin URI: https://www.philantro.com
  * Description: <strong>Philantro is an all inclusive donation platform for lean nonprofits.</strong><br/> To sign up for Philantro, first <a href="https://www.philantro.com/sign-up">create a Philantro account</a>. Once you've logged in and completed your profile, you'll be all set to add Philantro to your website. Nonprofits grow with Philantro, begin accepting donations and selling event tickets with powerful analytics, next-day deposits and flexible reporting.
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author: Philantro Inc.
  * Author URI: https://www.philantro.com
  * License: GPLv2
@@ -40,12 +40,12 @@ function philantro() {
     <script type="text/javascript">
         var URI = window.location.href;
         var s = document.createElement('script');
+        var head = document.getElementsByTagName('head')[0];
         s.type = "text/javascript";
         s.src = "//s3-us-west-2.amazonaws.com/philantro/pdf/philantro.js";
         s.async = true;
         window.options = { EIN: <?php echo $EIN ?>, Referrer: URI};
-        var b = document.getElementsByTagName('script')[0];
-        document.body.appendChild(s);
+        head.appendChild(s);
     </script>
 <?php
 }
