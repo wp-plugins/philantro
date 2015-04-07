@@ -38,14 +38,16 @@ function philantro() {
     $EIN = get_option('EIN');
     ?>
     <script type="text/javascript">
+        (function() {
         var URI = window.location.href;
         var s = document.createElement('script');
-        var head = document.getElementsByTagName('head')[0];
+        var ph = document.getElementsByTagName('script')[0];
         s.type = "text/javascript";
         s.src = "//s3-us-west-2.amazonaws.com/philantro/pdf/philantro.js";
         s.async = true;
         window.options = { EIN: '<?php echo $EIN ?>', Referrer: URI};
-        head.appendChild(s);
+        ph.parentNode.insertBefore(s, ph);
+        })();
     </script>
 <?php
 }
