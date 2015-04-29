@@ -112,15 +112,8 @@ background-color: #fff;
 border-radius: 4px;
 border: 1px solid #dedede;
 margin-top:15px; margin-bottom:15px;
-"><span style="font-size:13px; color:#bbb; margin:10px 0 0 0; padding:0;" id="org_website">http://www.youwebsite.com/</span>
-        <code style="font-size: 90%;
-        display:inline-block;
-color: #c7254e;
-background-color: #f9f2f4;
-white-space: nowrap;
-border-radius: 4px;">
-            #_givealways
-        </code>
+"><span style="font-size:13px; color:#777; margin:10px 0 0 0; padding:0;" id="org_website">http://www.youwebsite.com/</span><span style="color:#777;">#_givealways</span>
+
     </div>
     <a href="#_givealways" class="button-primary">Test Philantro Setup</a>
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
