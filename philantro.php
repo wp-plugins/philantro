@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Philantro, The Better Way to Accept Donations
  * Plugin URI: http://www.philantro.com
- * Description: <strong>Philantro is an all inclusive donation platform for lean nonprofits.</strong><br/> To sign up for Philantro, first <a href="https://www.philantro.com/sign-up">create a Philantro account</a>. Once you've logged in and completed your profile, you'll be all set to add Philantro to your website. Nonprofits grow with Philantro, begin accepting donations and selling event tickets with powerful analytics, next-day deposits and flexible reporting.
+ * Description: <strong>Philantro is a better way to accept donations.</strong><br/> To sign up for Philantro, first <a href="https://www.philantro.com/sign-up">create a Philantro account</a>. Once you've logged in and completed your profile, you'll be all set to add Philantro to your website. Nonprofits grow with Philantro, begin accepting donations and selling event tickets with powerful analytics, next-day deposits and flexible reporting.
  * Version: 1.1.2
  * Author: Philantro Inc.
  * Author URI: http://www.philantro.com
