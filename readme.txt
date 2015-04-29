@@ -6,10 +6,9 @@ Tested up to: 4.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: 1.1.2 
+Simple and secure donation form that allows you accept one-time and recurring donations. Its backed by the perfect nonprofit dashboard that allows you keep track of donors, donations, campaign contributions and more - try it.
 
-Integrate Philantro's donation platform to add the ability to accept donation and more on your website. Official Philantro plugin.
-
-== Description ==
+== Description == 
 
 Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin for WordPress adds the required javascript snippet to integrate the Philantro donation platform. Accept donations securely, sell event tickets, track donations/donors and more. The Philantro plugin requires the organization to be registered with Philantro.
 
