@@ -75,9 +75,36 @@
 
     </form>
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
-    <p><b style="font-size:14px;">Open The Donation Form On Any Page</b></p>
+    <p><b style="font-size:14px;">Standard Donation Button</b></p>
     <p style="font-size:13px; color:#999; margin:0; padding:0;">
-        Add the following suffix to any URL on your website to pull up your donation form.
+        Place this code where you would like the donation button to show.
+    </p>
+
+    <div style="padding: 10px;
+background-color: #fff;
+border-radius: 4px;
+border: 1px solid #dedede;
+margin-top:15px; margin-bottom:15px;
+">
+        <code style="font-size: 90%;
+        display:inline-block;
+color: #c7254e;
+background-color: #f9f2f4;
+white-space: nowrap;
+border-radius: 4px;">
+            &lt;!----------------------- Donate Button ---------------------&gt;<br/>
+            &lt;a href="#_givealways" id="philantro-db"&gt;Donate&lt;/a&gt;<br/>
+            &lt;!-----------------------------------------------------------&gt;<br/>
+        </code>
+    </div>
+
+    <!----------------------- Donate Button --------------------->
+    <a href="#_givealways" id="philantro-db">Donate</a>
+    <!----------------------------------------------------------->
+    <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
+    <p><b style="font-size:14px;">Design Your Own Button</b></p>
+    <p style="font-size:13px; color:#999; margin:0; padding:0;">
+        Create your own donation button and use the following link to open your donation form.
     </p>
 
     <div style="padding: 10px;

@@ -1,11 +1,11 @@
 === Philantro ===
 Contributors: Philantro
-Tags: Philantro, Give Always, Donations, Giving, Philanthro, Donate, Nonprofit, Non-Profit
+Tags: Philantro, Give Always, Donations, Giving, Philanthro, Donate, Nonprofit, Non-Profit, Donation Form, Donate Form, Nonprofits, Charity, NGO
 Requires at least: 2.7
 Tested up to: 4.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.0.2
+Stable tag: 1.1.2 
 
 Integrate Philantro's donation platform to add the ability to accept donation and more on your website. Official Philantro plugin.
 
