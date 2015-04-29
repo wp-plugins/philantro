@@ -19,16 +19,16 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 >* Accept donations directly on your website; [Philantro](https://www.philantro.com) works on any website.
 >* Run multiple campaigns. Donors can select a campaign to give to directly from your donation form. Each campaign also has it's own direct link and form.
 >* Sell tickets to your organization's events, set reminders and validate tickets at the door.
->* Fast, next-day deposits. Your funds are deposited directly in your verified bank account on the next business day.
+>* Rolling two-day deposits. Your funds are deposited directly in your verified bank account.
 >* Insightful reporting and analytics like never before. On your Philantro dashboard, find everything from donor conversion rates, gender breakdowns, social network contribution and more!
->* Donor management is all inclusive. Donor records are automatically built and updated with each donation so you can see the names used, addresses used, track the largest, first and last gift and more.
+>* Donor records are automatically generated and updated with each donation so you can see the names used, addresses used, track the largest, first and last gift and more.
 >* This is just the beginning, learn more at [Philantro.com](https://www.philantro.com).
 
 
 = For more information =
 [Philantro](https://www.philantro.com), 
 [Try Philantro](https://www.philantro.com/try-it), 
-[Register with Philantro](https://www.philantro.com/sign-up)
+[Register with Philantro](https://www.philantro.com/sign-up) 
  
 
 == Installation ==
