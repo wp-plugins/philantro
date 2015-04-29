@@ -1,6 +1,6 @@
 === Philantro ===
 Contributors: Philantro
-Tags: Philantro, Give Always, Donations, Giving, Philanthro, Donate, Nonprofit, Non-Profit, Donation Form, Donate Form, Nonprofits, Charity, NGO
+Tags: Philantro, Give Always, Donations, Giving, Philanthro, Donate, Nonprofit, Non-Profit, Donation Form, Donate Form, Nonprofits, Charity, NGO, Campaign Donations, Donate Page, Donate Plugin, Donation Buttons, Donate Button, Donation Widget, WordPress Donations
 Requires at least: 2.7
 Tested up to: 4.2
 License: GPLv2
