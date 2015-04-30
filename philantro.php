@@ -3,7 +3,7 @@
  * Plugin Name: Philantro, The Better Way to Accept Donations
  * Plugin URI: http://www.philantro.com
  * Description: <strong>Philantro is a better way to accept donations.</strong><br/> To sign up for Philantro, first <a href="https://www.philantro.com/sign-up">create a Philantro account</a>. Once you've logged in and completed your profile, you'll be all set to add Philantro to your website. Nonprofits grow with Philantro, begin accepting donations and selling event tickets with powerful analytics, next-day deposits and flexible reporting.
- * Version: 1.2.4
+ * Version: 1.2.5
  * Author: Philantro Inc.
  * Author URI: http://www.philantro.com
  * License: GPLv2
@@ -22,35 +22,35 @@ function deactive_philantro() {
     delete_option('EIN');
 }
 
-function admin_init_philantro() {
-    register_setting('philantro', 'EIN');
-}
+            function admin_init_philantro() {
+                register_setting('philantro', 'EIN');
+            }
 
-function admin_menu_philantro() {
-    add_menu_page('Philantro', 'Philantro', 'manage_options', 'philantro', 'options_page_philantro', philantro_icon);
-}
+            function admin_menu_philantro() {
+                add_menu_page('Philantro', 'Philantro', 'manage_options', 'philantro', 'options_page_philantro', philantro_icon);
+            }
 
-function options_page_philantro() {
-    include(philantro_option_page);
-}
+            function options_page_philantro() {
+                include(philantro_option_page);
+            }
 
-function philantro() {
-    $EIN = get_option('EIN');
-    ?>
-    <script type="text/javascript">
-        (function() {
-        var URI = window.location.href;
-        var s = document.createElement('script');
-        var ph = document.getElementsByTagName('script')[0];
-        s.type = "text/javascript";
-        s.src = "//s3-us-west-2.amazonaws.com/philantro/pdf/philantro.js";
-        s.async = true;
-        window.options = { EIN: '<?php echo $EIN ?>', Referrer: URI};
-        ph.parentNode.insertBefore(s, ph);
-        })();
-    </script>
-<?php
-}
+            function philantro() {
+                $EIN = get_option('EIN');
+                ?>
+            <script type="text/javascript">
+                    (function() {
+                        var URI = window.location.href;
+                        var s = document.createElement('script');
+                        var ph = document.getElementsByTagName('script')[0];
+                        s.type = "text/javascript";
+                        s.src = "//s3-us-west-2.amazonaws.com/philantro/pdf/philantro.js";
+                        s.async = true;
+                        window.options = { EIN: '<?php echo $EIN ?>', Referrer: URI};
+                        ph.parentNode.insertBefore(s, ph);
+                    })();
+        </script>
+        <?php
+    }
 
 function load_campaigns() {
     $EIN = get_option('EIN');
@@ -59,6 +59,9 @@ function load_campaigns() {
 
         $current_user =  wp_get_current_user();
         $plugin_data = get_plugin_data(plugin_dir_path( __FILE__ ) . '/philantro.php');
+        $currentScreen = get_current_screen();
+
+        if($currentScreen->parent_file == 'philantro'):
 
         ?>
 
@@ -104,7 +107,7 @@ function load_campaigns() {
                 });
         }
     </script>
-<?php endif;
+<?php endif; endif;
 }
 
 register_activation_hook(__FILE__, 'activate_philantro');
