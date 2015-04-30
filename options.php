@@ -45,7 +45,7 @@
 
             <tr valign="top">
                 <td  style="width:200px;">
-                    <b style="font-size:14px;">Organization's EIN:</b>
+                    <b style="font-size:14px;">Your Organization's EIN:</b>
                     <p style="font-size:12px; color:#999; margin:0; padding:0;">
                         9 Digit Tax-ID (ex 462820531)
                     </p>
