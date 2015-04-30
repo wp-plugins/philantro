@@ -93,13 +93,13 @@ background-color: #f9f2f4;
 white-space: nowrap;
 border-radius: 4px;">
             &lt;!----------------------- Donate Button ---------------------&gt;<br/>
-            &lt;a href="#_givealways" id="philantro-db"&gt;Donate&lt;/a&gt;<br/>
+            &lt;a href="#_givealways" class="philantro-btn"&gt;Donate&lt;/a&gt;<br/>
             &lt;!-----------------------------------------------------------&gt;<br/>
         </code>
     </div>
 
     <!----------------------- Donate Button --------------------->
-    <a href="#_givealways" id="philantro-db">Donate</a>
+    <a href="#_givealways" class="philantro-btn">Donate</a>
     <!----------------------------------------------------------->
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
     <p><b style="font-size:14px;">Design Your Own Button</b></p>
