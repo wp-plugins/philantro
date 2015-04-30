@@ -57,8 +57,7 @@ function load_campaigns() {
 
     if($EIN):
 
-        global $current_user;
-        get_currentuserinfo();
+        $current_user =  wp_get_current_user();
 
         ?>
 
