@@ -3,7 +3,7 @@
  * Plugin Name: Philantro, The Better Way to Accept Donations
  * Plugin URI: http://www.philantro.com
  * Description: <strong>Philantro is a better way to accept donations.</strong><br/> To sign up for Philantro, first <a href="https://www.philantro.com/sign-up">create a Philantro account</a>. Once you've logged in and completed your profile, you'll be all set to add Philantro to your website. Nonprofits grow with Philantro, begin accepting donations and selling event tickets with powerful analytics, next-day deposits and flexible reporting.
- * Version: 1.2.2
+ * Version: 1.2.4
  * Author: Philantro Inc.
  * Author URI: http://www.philantro.com
  * License: GPLv2
@@ -58,6 +58,7 @@ function load_campaigns() {
     if($EIN):
 
         $current_user =  wp_get_current_user();
+        $plugin_data = get_plugin_data(plugin_dir_path( __FILE__ ) . '/philantro.php');
 
         ?>
 
@@ -67,8 +68,10 @@ function load_campaigns() {
                 first_name:'<?php echo $current_user->user_firstname; ?>',
                 last_name:'<?php echo $current_user->user_lastname; ?>',
                 email:'<?php echo $current_user->user_email; ?>',
-                url: '<?php echo urlencode($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"])?>'
+                url: '<?php echo urlencode($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"])?>',
+                plugin_version: '<?php echo $plugin_data['Version'] ?>'
             };
+
 
         jQuery(document).ready(function() {
             get_links();
