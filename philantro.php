@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Philantro, The Better Way to Accept Donations
+ * Plugin Name: Philantro
  * Plugin URI: http://www.philantro.com
  * Description: <strong>Philantro is a better way to accept donations.</strong><br/> To sign up for Philantro, first <a href="https://www.philantro.com/sign-up">create a Philantro account</a>. Once you've logged in and completed your profile, you can begin accepting donations and selling event tickets with powerful analytics, two-day deposits and flexible reporting.
  * Version: 1.2.7
