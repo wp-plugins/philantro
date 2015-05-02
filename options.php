@@ -6,18 +6,30 @@
             <td style="vertical-align:middle">
                 <p style="margin:0; padding:0 0 5px 0; line-height:35px; font-size:35px; font-weight:bold;">Philantro</p>
                 <p style="color:#888; margin:0; font-size:14px; padding:0;">The All-Inclusive Donation Platform for Lean Nonprofits</p>
+
             </td>
         </tr>
     </table>
-<hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
+    <?php if(get_option('EIN') == '' || get_option('EIN') == '462820531'):?>
+        <div style="
+    padding: 20px;
+    margin-top:20px;
+    background-color: #FFEFB1;
+    border: 1px solid #E7D55D;
+    font-size: 13px;
+    color: #B6A14E;">If you haven't already, please create a free account with Philantro to utilize this official plugin to begin accepting donations and gain access to your dashboard.
+            <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #FFF4CB; border-top: 1px solid #E7D55D; border-right:none; border-left:none; height:0px;">
+            <a href="https://www.philantro.com/try-it" target="_BLANK" style="display: block; padding: 20px; text-align: center; border-radius: 6px; font-size: 16.25px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;  text-decoration: none; min-height: 20px; color: rgb(255, 255, 255); max-height: 62px;background-color: #E7AC5D;border: 1px solid #D7943A;"><b style="font-size: 16px;">New to Philantro</b><br><span style="font-size:13px">Test Drive the Dashboard</span></a>        </div>
+    <?php endif; ?>
+    <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
     <?php if($_GET['settings-updated']):?>
-    <div style="
+        <div style="
     padding: 10px;
     background-color: #EBF4CA;
     border: 1px solid #B9D098;
     margin-bottom: 20px;
     font-size: 13px;
-    color: #889D6E;
+    color: #889D6E;a
 ">Your EIN has been updated successfully.</div>
     <?php endif; ?>
     <?php
@@ -119,8 +131,8 @@ margin-top:15px; margin-bottom:15px;
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
     <p><b style="font-size:14px;">Links For Specific Campaign Forms</b></p>
     <p style="font-size:13px; color:#999; margin:0 0 15px 0; padding:0;">
-       Not only does Philantro allow you to have a donation form where your donors can select from your campaigns, you can also link to specific ones.
-       For instance, if you want to share a link to the "Capital Campaign", you can use a link that opens the "Capital Campaign" donation form. Create campaigns from your <a style="color:#4380A5;" href="https://www.philantro.com/sign-in">nonprofit dashboard</a>.
+        Not only does Philantro allow you to have a donation form where your donors can select from your campaigns, you can also link to specific ones.
+        For instance, if you want to share a link to the "Capital Campaign", you can use a link that opens the "Capital Campaign" donation form. Create campaigns from your <a style="color:#4380A5;" href="https://www.philantro.com/sign-in">nonprofit dashboard</a>.
     </p>
     <div id="campaign_links" style="padding-top:20px;">
         <div style="padding: 28px 10px;
@@ -134,9 +146,9 @@ color: #B6894E;">Campaigns Links will show here
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
     <table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
         <tr>
-        <td>
-            <p style="color:#999; margin:0; font-size:13px; padding:0;">Access your nonprofit dashboard anytime at <a style="color:#4380A5;" href="https://www.philantro.com/sign-in">Philantro.com</a></p>
-        </td>
+            <td>
+                <p style="color:#999; margin:0; font-size:13px; padding:0;">Access your nonprofit dashboard anytime at <a style="color:#4380A5;" href="https://www.philantro.com/sign-in">Philantro.com</a></p>
+            </td>
         </tr>
-        </table>
+    </table>
 </div>
