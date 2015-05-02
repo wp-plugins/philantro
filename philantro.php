@@ -68,7 +68,7 @@ function load_campaigns() {
         <script type="text/javascript">
 
             setTimeout(function(){
-                $('#philantro-notification').fadeOut();
+                jQuery('#philantro-notification').fadeOut();
             }, 3000);
 
 
