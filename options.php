@@ -17,7 +17,7 @@
     background-color: #FFEFB1;
     border: 1px solid #E7D55D;
     font-size: 13px;
-    color: #B6A14E;">If you haven't already, please create a free account with Philantro to utilize this official plugin to begin accepting donations and gain access to your dashboard.
+    color: #B6A14E;">If you haven't already, please create a free account with Philantro to utilize this official plugin to begin accepting donations and gain access to your dashboard. <br/><br/>Also, don't forget to enter and save your organization's 9 digit EIN/Tax ID.
             <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #FFF4CB; border-top: 1px solid #E7D55D; border-right:none; border-left:none; height:0px;">
             <a href="https://www.philantro.com/try-it" target="_BLANK" style="display: block; padding: 20px; text-align: center; border-radius: 6px; font-size: 16.25px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;  text-decoration: none; min-height: 20px; color: rgb(255, 255, 255); max-height: 62px;background-color: #E7AC5D;border: 1px solid #D7943A;"><b style="font-size: 16px;">New to Philantro</b><br><span style="font-size:13px">Test Drive the Dashboard</span></a>        </div>
     <?php endif; ?>
