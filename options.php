@@ -30,7 +30,7 @@
     margin-bottom: 20px;
     font-size: 13px;
     color: #889D6E;a
-">Your EIN has been updated successfully.</div>
+" id="philantro-notification">Your EIN has been updated successfully.</div>
     <?php endif; ?>
     <?php
     function full_path()
@@ -89,7 +89,8 @@
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
     <p><b style="font-size:14px;">Standard Donation Button</b></p>
     <p style="font-size:13px; color:#999; margin:0; padding:0;">
-        Place this code where you would like the donation button to show.
+        Place this code where you would like the donation button to show.<br/>
+        You can customize this button from your Philantro dashboard.
     </p>
 
     <div style="padding: 10px;

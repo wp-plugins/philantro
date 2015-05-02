@@ -67,6 +67,11 @@ function load_campaigns() {
 
         <script type="text/javascript">
 
+            setTimeout(function(){
+                $('#philantro-notification').fadeOut();
+            }, 3000);
+
+
             var person = {
                 first_name:'<?php echo $current_user->user_firstname; ?>',
                 last_name:'<?php echo $current_user->user_lastname; ?>',
