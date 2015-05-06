@@ -96,7 +96,7 @@ function load_campaigns() {
                         person: person
                     },
                     success: function( response ) {
-                        jQuery('#org_website').html(response.website);
+                        jQuery('#org_website').html(response.website); 
                         if(response.links){
                             jQuery('#campaign_links').html('');
                             jQuery.each(response.links, function(i, item) {
