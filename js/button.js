@@ -3,7 +3,7 @@
     tinymce.create('tinymce.plugins.Philantro', {
         init : function(ed, url) {
             ed.addButton('philantro', {
-                title : 'Insert Philantro Donate Button Shortcode',
+                title : 'Insert Philantro Button',
                 image : url.replace('js', 'asset/wordpress-asset.png'),
                 type: 'menubutton',
                 menu: [
