@@ -87,9 +87,9 @@
 
     </form>
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
-    <p><b style="font-size:14px;">Standard Donation Button</b></p>
+    <p><b style="font-size:14px;">Standard Donate Button Shortcode</b></p>
     <p style="font-size:13px; color:#999; margin:0; padding:0;">
-        Place this code where you would like the donation button to show.<br/>
+        Place this shortcode where you would like the donation button to show.<br/>
         You can customize this button from your Philantro dashboard.
     </p>
 
@@ -105,14 +105,12 @@ color: #c7254e;
 background-color: #f9f2f4;
 white-space: nowrap;
 border-radius: 4px;">
-            &lt;!----------------------- Donate Button ---------------------&gt;<br/>
-            &lt;a href="#_givealways" class="philantro-btn"&gt;Donate&lt;/a&gt;<br/>
-            &lt;!-----------------------------------------------------------&gt;<br/>
+            [donate label="Donate Now"]
         </code>
     </div>
 
     <!----------------------- Donate Button --------------------->
-    <a href="#_givealways" class="philantro-btn">Donate</a>
+    <a href="#_givealways" class="philantro-btn">Donate Now</a>
     <!----------------------------------------------------------->
     <hr style="padding:0; margin:20px 0; border-bottom: 1px solid #F4F4F4; border-top: 1px solid #DDDDDD; border-right:none; border-left:none; height:0px;"/>
     <p><b style="font-size:14px;">Design Your Own Button</b></p>

@@ -58,8 +58,9 @@ To begin, your organization must be registered with [Philantro](https://www.phil
 == Screenshots ==
 
 1. Philantro's settings page.
-2. Philantro donation form triggered by the Philantro plugin for Wordpress.
-3. Screenshot of the Philantro donate process.
-4. Screenshot of the Philantro donate process at the billing stage.
-5. Screenshot of a completed donation.
-6. Philantro's nonprofit dashboard. When you register with Philantro, your nonprofit has access to insightful reporting, analytics and tools and more. Get Started.
+3. Add the donation or event ticket button to any page with ease.
+3. Philantro donation form triggered by the Philantro plugin for Wordpress.
+4. Screenshot of the Philantro donate process.
+5. Screenshot of the Philantro donate process at the billing stage.
+6. Screenshot of a completed donation.
+7. Philantro's nonprofit dashboard. When you register with Philantro, your nonprofit has access to insightful reporting, analytics and tools and more. Get Started.
