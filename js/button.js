@@ -1,16 +1,57 @@
 (function() {
 
+
+
     tinymce.create('tinymce.plugins.Philantro', {
         init : function(ed, url) {
+
+
+            var minicolour = url.replace('js', 'js/minicolours.js');
+            var css = url.replace('js', 'css/philantro.css');
+            jQuery.getScript(minicolour, function() {
+                jQuery('head').append( jQuery('<link rel="stylesheet" type="text/css" />').attr('href', css ) );
+                jQuery('#philantro-color-picker').css('left',0);
+            });
+
             ed.addButton('philantro', {
-                title : 'Insert Philantro Button',
+                title : 'Insert Philantro Donate Button Shortcode',
                 image : url.replace('js', 'asset/wordpress-asset.png'),
+                id: 'Philantro-BTN',
                 type: 'menubutton',
                 menu: [
                     {
                         text: 'Donate Button',
                         onclick : function() {
-                            ed.execCommand('mceInsertContent', false, '[donate label="Donate Now"]');
+                            ed.windowManager.open( {
+                                title: 'Donate Button Options',
+                                body: [{
+                                        type: 'textbox',
+                                        id: 'philantro-color-picker',
+                                        name: 'color',
+                                        label: 'Button Color'
+                                    },
+                                    {
+                                        type: 'textbox',
+                                        name: 'label',
+                                        label: 'Button Text'
+                                    },
+                                ],
+                                onsubmit: function( e ) {
+
+                                    if(!e.data.label){
+                                        e.data.label = 'Donate Now';
+                                    }
+
+                                    ed.execCommand('mceInsertContent', false, '[donate color="'+ e.data.color  +'" label="'+ e.data.label +'"]');
+                                }
+                            });
+
+                            jQuery('#philantro-color-picker').minicolors({
+                                opacity: false,
+                                position: 'top right',
+                                defaultValue: '#3277A2'
+                            });
+
                         }
                     },
                     {
@@ -22,13 +63,37 @@
                                         type: 'textbox',
                                         name: 'eventid',
                                         label: 'Event ID'
-                                    }],
+                                    },
+                                    {
+                                        type: 'textbox',
+                                        id: 'philantro-color-picker',
+                                        name: 'color',
+                                        label: 'Button Color'
+                                    },
+                                    {
+                                        type: 'textbox',
+                                        name: 'label',
+                                        label: 'Button Text'
+                                    },
+                                ],
                                 onsubmit: function( e ) {
-                                    ed.execCommand('mceInsertContent', false, '[event id="'+ e.data.eventid  +'" label=""]');
+
+                                    if(!e.data.label){
+                                        e.data.label = 'Purchase Tickets';
+                                    }
+
+
+                                    ed.execCommand('mceInsertContent', false, '[event id="'+ e.data.eventid  +'" color="'+ e.data.color  +'" label="'+ e.data.label +'"]');
                                 }
                             });
 
-                        }
+                            jQuery('#philantro-color-picker').minicolors({
+                                opacity: false,
+                                position: 'top right',
+                                defaultValue: '#3277A2'
+                            });
+
+                            }
                     }
                 ]
             });
@@ -47,5 +112,9 @@
         }
     });
     tinymce.PluginManager.add('philantro', tinymce.plugins.Philantro);
+
+
+
+
 
 })();

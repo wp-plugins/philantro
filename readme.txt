@@ -60,7 +60,7 @@ When writting a post or page, on your text editor there is a Philantro button - 
 == Screenshots ==
 
 1. Philantro's settings page.
-3. Add the donation or event ticket button to any page with ease.
+3. Add the donation or event ticket button to any page and change the color and text with ease.
 3. Philantro donation form triggered by the Philantro plugin for Wordpress.
 4. Screenshot of the Philantro donate process.
 5. Screenshot of the Philantro donate process at the billing stage.
