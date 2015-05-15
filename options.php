@@ -90,7 +90,7 @@
     <p><b style="font-size:14px;">Standard Donate Button Shortcode</b></p>
     <p style="font-size:13px; color:#999; margin:0; padding:0;">
         Place this shortcode where you would like the donation button to show.<br/>
-        You can customize this button from your Philantro dashboard.
+        You can customize your button's text and background color from your page/post editor.
     </p>
 
     <div style="padding: 10px;
@@ -105,7 +105,7 @@ color: #c7254e;
 background-color: #f9f2f4;
 white-space: nowrap;
 border-radius: 4px;">
-            [donate label="Donate Now"]
+            [donate label="Donate Now" color="#3277A2"]
         </code>
     </div>
 
