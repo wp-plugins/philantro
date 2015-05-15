@@ -16,19 +16,18 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 
 = Nonprofits Grow with Philantro =
 
->* Accept donations directly on your website; [Philantro](https://www.philantro.com) works on any website.
+>* Accept one time/recurring donations securely on your website.
 >* Run multiple campaigns. Donors can select a campaign to give to directly from your donation form. Each campaign also has it's own direct link and form.
->* Sell tickets to your organization's events, set reminders and validate tickets at the door.
 >* Rolling two-day deposits. Your funds are deposited directly in your verified bank account.
 >* Insightful reporting and analytics like never before. On your Philantro dashboard, find everything from donor conversion rates, gender breakdowns, social network contribution and more!
 >* Donor records are automatically generated and updated with each donation so you can see the names used, addresses used, track the largest, first and last gift and more.
->* This is just the beginning, learn more at [Philantro.com](https://www.philantro.com).
+>* More features coming soon! [Philantro.com](https://www.philantro.com).
 
 
 = For more information =
 [Philantro](https://www.philantro.com), 
 [Try Philantro](https://www.philantro.com/try-it), 
-[Register with Philantro](https://www.philantro.com/sign-up) 
+[Register with Philantro](https://www.philantro.com/sign-up)
  
 
 == Installation ==
@@ -44,8 +43,11 @@ To begin, your organization must be registered with [Philantro](https://www.phil
 
 
 = How To Show The Donation Form =
+When writting a post or page, on your text editor there is a Philantro button - Simple as that. 
 
->Use `#_givealways` as the link.
+
+= Donate Button Shortcode =
+>[donate label="Donate Today"]
 
 
 
