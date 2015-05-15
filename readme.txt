@@ -5,7 +5,7 @@ Requires at least: 2.7
 Tested up to: 4.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.2.7 
+Stable tag: 1.3 
 
 Simple and secure donation form that enables you to accept one-time/recurring donations backed by the perfect nonprofit dashboard.
 
