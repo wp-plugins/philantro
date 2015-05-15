@@ -43,7 +43,7 @@ To begin, your organization must be registered with [Philantro](https://www.phil
 
 
 = How To Show The Donation Form =
-When writting a post or page, on your text editor there is a Philantro button - Simple as that. 
+In your text editor there is a Philantro button that allows you to place and customize the text and color of your donation button with ease. 
 
 
 = Donate Button Shortcode =
