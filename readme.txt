@@ -1,17 +1,17 @@
 === Philantro ===
 Contributors: Philantro
-Tags: Philantro, Give Always, Donations, Giving, Philanthro, Donate, Nonprofit, Non-Profit, Donation Form, Donate Form, Nonprofits, Charity, NGO, Campaign Donations, Donate Page, Donate Plugin, Donation Buttons, Donate Button, Donation Widget, WordPress Donations
+Tags: Philantro, Give Always, Donations, Giving, Philanthro, Donate, Lean, Lean Nonprofit, Nonprofit, Non-Profit, Donation Form, Donate Form, Nonprofits, Charity, NGO, Campaign Donations, Donate Page, Donate Plugin, Donation Buttons, Donate Button, Donation Widget, WordPress Donations
 Requires at least: 2.7
 Tested up to: 4.2
 License: GPLv2
-License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: 1.3.1
 
 Simple and secure donation form that enables you to accept one-time/recurring donations backed by the perfect nonprofit dashboard.
 
 == Description == 
 
-Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin for WordPress adds the required javascript snippet to integrate the Philantro donation platform. Accept donations securely, sell event tickets, track donations/donors and more. The Philantro plugin requires the organization to be registered with Philantro.
+Philantro is the all-inclusive donation platform for lean nonprofits. Accept donations securely, manage donors, sell event tickets, track donations and more. The Philantro plugin requires the organization to be registered with [Philantro](https://www.philantro.com).
 
 
 = Nonprofits Grow with Philantro =
@@ -25,9 +25,9 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Our plugin
 
 
 = For more information =
-[Philantro](https://www.philantro.com), 
-[Try Philantro](https://www.philantro.com/try-it), 
-[Register with Philantro](https://www.philantro.com/sign-up)
+>[Philantro](https://www.philantro.com) 
+>[Try Philantro](https://www.philantro.com/try-it) 
+>[Register with Philantro](https://www.philantro.com/sign-up)
  
 
 == Installation ==
@@ -52,9 +52,9 @@ In your text editor there is a Philantro button that allows you to place and cus
 
 
 = For more information =
-[Philantro](https://www.philantro.com),
-[Try Philantro](https://www.philantro.com/try-it),
-[Register with Philantro](https://www.philantro.com/sign-up)
+>[Philantro](https://www.philantro.com)
+>[Try Philantro](https://www.philantro.com/try-it)
+>[Register with Philantro](https://www.philantro.com/sign-up)
 
 
 == Screenshots ==
