@@ -25,9 +25,9 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Accept don
 
 
 = For more information =
->[Philantro](https://www.philantro.com) 
->[Try Philantro](https://www.philantro.com/try-it) 
->[Register with Philantro](https://www.philantro.com/sign-up)
+*  [Philantro](https://www.philantro.com) 
+*  [Try Philantro](https://www.philantro.com/try-it) 
+*  [Register with Philantro](https://www.philantro.com/sign-up)
  
 
 == Installation ==
@@ -52,9 +52,9 @@ In your text editor there is a Philantro button that allows you to place and cus
 
 
 = For more information =
->[Philantro](https://www.philantro.com)
->[Try Philantro](https://www.philantro.com/try-it)
->[Register with Philantro](https://www.philantro.com/sign-up)
+*  [Philantro](https://www.philantro.com)
+*  [Try Philantro](https://www.philantro.com/try-it)
+*  [Register with Philantro](https://www.philantro.com/sign-up)
 
 
 == Screenshots ==
@@ -66,3 +66,18 @@ In your text editor there is a Philantro button that allows you to place and cus
 5. Screenshot of the Philantro donate process at the billing stage.
 6. Screenshot of a completed donation.
 7. Philantro's nonprofit dashboard. When you register with Philantro, your nonprofit has access to insightful reporting, analytics and tools and more. Get Started.
+
+
+== Upgrade Notice == 
+
+= 1.3 = 
+Now includes Event. Sell event tickets and track purchaser and event analytics from the Philantro dashboard.
+
+= 1.2 =
+Philantro now allows you to customize the donation button's color and text directly from the post and page editor.
+
+= 1.0 =
+Now includes a shortcode. Philantro generates the default button wherever the shortcode is placed.
+
+= 0.9 =
+Now shows your nonprofit's campaign links. These links open the donation form for a specific campaign instead of the general donation form where they can select from them all.
