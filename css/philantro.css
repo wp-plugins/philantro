@@ -195,8 +195,8 @@
     display: inline-block;
 }
 
-.minicolors{
-
+div.minicolors{
+position: relative;
 }
 /* Default theme */
 
@@ -224,4 +224,31 @@
     width: 158px;
     height: 28px;
     text-indent: 30px;
+}
+#color-shield .minicolors-theme-default input{
+    width: 90%;
+    margin-left: 10%;
+}
+#color-shield .minicolors-swatch{
+    left:0;
+    top:0;
+}
+#color-shield .minicolors-panel{
+    left:0;
+    top: -160px;
+}
+.color-selectored{
+    width: 90%;
+    margin-left: 10%;
+}
+.widget-content .minicolors-panel{
+    left: 0;
+    top: -160px;
+}
+.widget-content div.minicolors{
+    position: relative;
+}
+.widget-content .minicolors-swatch{
+    top:0;
+    left:0;
 }
