@@ -184,42 +184,48 @@ function thisScreen() {
 function load_colors(){ ?>
     <script type="text/javascript">
 
-    jQuery('.color-selectored').minicolors('destroy');
+        function loadColor(){
+            jQuery('.color-selectored').minicolors('destroy');
 
 
-    jQuery('.color-selectored').minicolors({
-                                opacity: false,
-                                position: 'top right',
-                                defaultValue: '#3277A2',
-                                change: function(hex) {
-                                    if(!hex){
-                                        hex = '#3277a2';
-                                    }
-                                    jQuery(this).closest('p').next().find('.philantro-btn').css('background-color',hex);
-                                }
-    })
+            jQuery('.color-selectored').minicolors({
+                                        opacity: false,
+                                        position: 'top right',
+                                        defaultValue: '#3277A2',
+                                        change: function(hex) {
+                                            if(!hex){
+                                                hex = '#3277a2';
+                                            }
+                                            jQuery(this).closest('p').nextAll().find('.philantro-btn').css('background-color',hex);
+                                            jQuery(this).closest('div').nextAll().find('.philantro-btn').css('background-color',hex);
+                                        }
+            })
+        }
 
 
 
     jQuery("#widget-list div[id*='_philantro-'] .widget-top").css({'background-color':'#3277a2', 'color':'#fff'});
 
 
+    function removeP(){
+        jQuery('.widget-content p').each(function() {
+            var $this = jQuery(this);
+            if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+                $this.remove();
+        });
+    }
+
+
+    removeP();
+    loadColor();
+
+
     if(jQuery( ".color-selectored" ).length ) {
 
 
     jQuery(document).ajaxComplete(function() {
-        jQuery('.color-selectored').minicolors('destroy');
-        jQuery('.color-selectored').minicolors({
-            opacity: false,
-            position: 'top right',
-            defaultValue: '#3277A2',
-            change: function(hex) {
-                if(!hex){
-                    hex = '#3277a2';
-                }
-                jQuery(this).closest('p').next().find('.philantro-btn').css('background-color',hex);
-            }
-        })
+        removeP();
+        loadColor();
 
     });
 
