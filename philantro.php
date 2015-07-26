@@ -78,10 +78,12 @@ class Philantro_Widget extends WP_Widget {
             padding: 17px;
             text-align: center;
             border-radius: 30px;
-            font-size: 16.25px;
-            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 13.25px;
+            font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
             text-indent: 45px;
             text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             min-height: 20px;
             color: rgb(255, 255, 255);
             max-height: 62px;
