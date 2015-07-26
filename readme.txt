@@ -17,6 +17,8 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Accept don
 = Nonprofits Grow with Philantro =
 
 >* Accept one time/recurring donations securely on your website.
+>* Attractive automated receipts that comply with IRS regulations governing tax-deductible contributions.
+>* For recurring donations, reminder emails are sent 7 days before their next charge.
 >* Run multiple campaigns. Donors can select a campaign to give to directly from your donation form. Each campaign also has it's own direct link and form.
 >* Insightful reporting and analytics like never before. On your Philantro dashboard, find everything from donor conversion rates, gender breakdowns, social network contribution and more!
 >* Donor records are automatically generated and updated with each donation so you can see the names used, addresses used, track the largest, first and last gift and more.
