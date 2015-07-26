@@ -28,6 +28,98 @@ function admin_init_philantro() {
 
 
 
+class Philantro_Widget extends WP_Widget {
+
+    function __construct() {
+        parent::__construct(
+            'philantro', // Base ID
+            __( 'Philantro Donate Button', 'text_domain' ), // Name
+            array( 'description' => __( 'Add a donate button to your sidebar.', 'text_domain' ), ) // Args
+        );
+    }
+
+    public function widget( $args, $instance ) {
+        echo $args['before_widget'];
+        if ( ! empty( $instance['title'] ) ) {
+            echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
+        }
+        // Use shortcodes in form like Landing Page Template.
+        echo do_shortcode( '[donate id="' . $instance['campaign_ID'] . '" label="'. $instance['label']  .'"  color="'. $instance['color']  .'"]' );
+        echo $args['after_widget'];
+    }
+
+    public function form( $instance ) {
+        $label = ! empty( $instance['label'] ) ? $instance['label'] : __( 'Donate', 'text_domain' );
+        $color = ! empty( $instance['color'] ) ? $instance['color'] : __( '#3277A2', 'text_domain' );
+        $campaign_ID = ! empty( $instance['campaign_ID'] ) ? $instance['campaign_ID'] : __( '', 'text_domain' );
+        ?>
+
+        <p style="color:#999; border-bottom:1px dotted #eaeaea; padding-bottom:20px;">Below you'll find a few options to help customize your donation button. Don't forget to save your changes.</p>
+
+
+        <p>
+            <label style="padding-bottom:8px; display: block;" for="<?php echo $this->get_field_id( 'color' ); ?>"><?php _e( 'Button Color:' ); ?></label>
+            <span style="display:block; position:relative" id="color-shield">
+            <input class="widefat color-selectored" id="<?php echo $this->get_field_id( 'color' ); ?>" name="<?php echo $this->get_field_name( 'color' ); ?>" type="text" value="<?php echo esc_attr( $color ); ?>">
+            </span>
+        </p>
+
+
+        <p>
+            <label style="padding-bottom:8px; display: block;" for="<?php echo $this->get_field_id( 'label' ); ?>"><?php _e( 'Button Text:' ); ?></label>
+            <input class="widefat button-text" id="<?php echo $this->get_field_id( 'label' ); ?>" name="<?php echo $this->get_field_name( 'label' ); ?>" type="text" value="<?php echo esc_attr( $label ); ?>">
+        </p>
+
+
+        <div id="button-preview" style="margin-top:30px;">
+            <a href="#_<?php if(!$campaign_ID): echo 'givealways'; else: echo $campaign_ID; endif; ?>" class="philantro-btn" style="background-color: <?php echo $color ?>; display: block;
+                padding: 17px;
+                text-align: center;
+                border-radius: 30px;
+                font-size: 16.25px;
+                font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+                text-indent: 45px;
+                text-decoration: none;
+                min-height: 20px;
+                color: rgb(255, 255, 255);
+                max-height: 62px;
+                min-width: 150px;
+                background-image: url(https://www.philantro.com/css/images/security-confirm.png);
+                background-position: 0% 50%;
+                background-repeat: no-repeat;"><?php echo $label ?></a>
+        </div>
+
+
+        <div style="border-top:1px dotted #eaeaea; margin-top:30px; padding-top:10px;">
+            <p style="color:#999;">To have the donate form open to a specific donation campaign, enter the Campaign ID below.</p>
+        </div>
+        <p>
+            <label style="padding-bottom:8px; display: block;" for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Campaign ID:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'campaign_ID' ); ?>" name="<?php echo $this->get_field_name( 'campaign_ID' ); ?>" type="text" value="<?php echo esc_attr( $campaign_ID ); ?>">
+        </p>
+
+    <?php
+    }
+
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['color'] = ( ! empty( $new_instance['color'] ) ) ? strip_tags( $new_instance['color'] ) : '';
+        $instance['label'] = ( ! empty( $new_instance['label'] ) ) ? strip_tags( $new_instance['label'] ) : '';
+        $instance['campaign_ID'] = ( ! empty( $new_instance['campaign_ID'] ) ) ? strip_tags( $new_instance['campaign_ID'] ) : '';
+
+        return $instance;
+    }
+
+}
+
+
+function register_philantro_widget() {
+    register_widget( 'Philantro_Widget' );
+}
+add_action( 'widgets_init', 'register_philantro_widget' );
+add_filter( 'widget_text', 'do_shortcode' );
+
+
 class philantro_button {
 
     public function __construct() {
@@ -56,11 +148,112 @@ class philantro_button {
     }
 }
 
+add_action( 'current_screen', 'thisScreen' );
+
+function thisScreen() {
+
+    $currentScreen = get_current_screen();
+
+    if($currentScreen->id == 'widgets'){
+        wp_enqueue_script( 'color_code_script', plugin_dir_url( __FILE__ ) . '/js/minicolours.js' );
+        wp_enqueue_style( 'color_code_style', plugin_dir_url( __FILE__ ) . '/css/philantro.css' );
+    }
+
+
+    if( $currentScreen->id === "toplevel_page_philantro" ) {
+
+        add_action( 'admin_head', 'admin_css' );
+
+        function admin_css(){
+
+            ?>
+            <style>
+                ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu>li.current>a.current:after{
+                    border-right-color: #f3f3f3;
+                }
+                #wpcontent{
+                    background-color: #f3f3f3;
+                }
+                .update-nag{
+                    display: none;
+                }
+            </style>
+        <?php
+        }
+    }
+}
+
+function load_colors(){ ?>
+    <script type="text/javascript">
+        jQuery('.color-selectored').minicolors({
+            opacity: false,
+            position: 'top right',
+            defaultValue: '#3277A2',
+            change: function(hex) {
+                if(!hex){
+                    hex = '#3277a2';
+                }
+                jQuery('.philantro-btn').css('background-color',hex);
+            }
+        })
 
 
 
+        jQuery("#widget-list div[id*='_philantro-'] .widget-top").css({'background-color':'#3277a2', 'color':'#fff'});
 
 
+        if(jQuery( ".color-selectored" ).length ) {
+
+
+            jQuery(document).ajaxComplete(function() {
+                jQuery('.color-selectored').minicolors({
+                    opacity: false,
+                    position: 'top right',
+                    defaultValue: '#3277A2',
+                    change: function(hex) {
+                        if(!hex){
+                            hex = '#3277a2';
+                        }
+                        jQuery('.philantro-btn').css('background-color',hex);
+                    }
+                })
+
+            });
+
+        }
+
+
+        function modify_button(thisObj){
+            var button_text = thisObj.val();
+
+            if(!button_text){
+                button_text = 'Donate';
+            }
+
+            jQuery('.philantro-btn').text(button_text);
+        }
+
+
+        jQuery(document).on('keyup', '.button-text', function(){
+            modify_button(jQuery(this));
+        })
+        jQuery(document).on('change', '.button-text', function(){
+            modify_button(jQuery(this));
+        })
+        jQuery(document).on('click', '.button-text', function(){
+            modify_button(jQuery(this));
+        })
+        jQuery(document).on("paste",".button-text", function() {
+            modify_button(jQuery(this));
+        });
+
+
+
+    </script>
+
+
+<?php
+}
 
 // Add Shortcode
 function donate_shortcode( $atts ) {
@@ -79,11 +272,7 @@ function donate_shortcode( $atts ) {
     );
     // Code
 
-    $color = str_replace("#", "", $color);
-
-    if(!preg_match('/^[a-f0-9]{6}$/i',$color)):
-        $color = '#' .  $color;
-    else:
+    if(!preg_match('/#([a-fA-F0-9]{3}){1,2}\b/',$color)):
         $color = '#3277A2';
     endif;
 
@@ -174,6 +363,7 @@ function load_campaigns() {
         $plugin_data = get_plugin_data(plugin_dir_path( __FILE__ ) . '/philantro.php');
         $currentScreen = get_current_screen();
 
+
         if($currentScreen->parent_file == 'philantro'):
 
             ?>
@@ -236,6 +426,7 @@ if (is_admin()) {
     add_action('admin_menu', 'admin_menu_philantro');
     add_action('admin_print_footer_scripts', 'load_campaigns' );
     add_action('admin_print_footer_scripts', 'philantro' );
+    add_action('admin_print_footer_scripts', 'load_colors' );
     add_shortcode( 'donate', 'donate_shortcode' );
     add_shortcode( 'event', 'event_shortcode' );
 //Add the button during admin init.

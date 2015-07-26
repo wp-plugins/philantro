@@ -5,7 +5,7 @@ Requires at least: 2.7
 Tested up to: 4.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.3.1
+Stable tag: 1.5.0
 
 Simple and secure donation form that enables you to accept one-time/recurring donations backed by the perfect nonprofit dashboard.
 
@@ -18,10 +18,11 @@ Philantro is the all-inclusive donation platform for lean nonprofits. Accept don
 
 >* Accept one time/recurring donations securely on your website.
 >* Run multiple campaigns. Donors can select a campaign to give to directly from your donation form. Each campaign also has it's own direct link and form.
->* Rolling two-day deposits. Your funds are deposited directly in your verified bank account.
 >* Insightful reporting and analytics like never before. On your Philantro dashboard, find everything from donor conversion rates, gender breakdowns, social network contribution and more!
 >* Donor records are automatically generated and updated with each donation so you can see the names used, addresses used, track the largest, first and last gift and more.
+>* We've partnered with [Stripe](https://stripe.com/gallery), the payment processor behind Twitter, FourSquare and Pinterest, to offer nonprofits secure processing, two-day desposits and fraud protection. 
 >* More features coming soon! [Philantro.com](https://www.philantro.com).
+
 
 
 = For more information =
@@ -46,6 +47,12 @@ To begin, your organization must be registered with [Philantro](https://www.phil
 In your text editor there is a Philantro button that allows you to place and customize the text and color of your donation button with ease. 
 
 
+= Donate Button Widget =
+You can also use the Philantro Donate Button widget to instantly add a donate button to your website.
+From the widget, you can customize the button text, color and more.
+
+
+
 = Donate Button Shortcode =
 >[donate label="Donate Today"]
 
@@ -60,15 +67,19 @@ In your text editor there is a Philantro button that allows you to place and cus
 == Screenshots ==
 
 1. Philantro's settings page.
-3. Add the donation or event ticket button to any page and change the color and text with ease.
-3. Philantro donation form triggered by the Philantro plugin for Wordpress.
-4. Screenshot of the Philantro donate process.
-5. Screenshot of the Philantro donate process at the billing stage.
-6. Screenshot of a completed donation.
-7. Philantro's nonprofit dashboard. When you register with Philantro, your nonprofit has access to insightful reporting, analytics and tools and more. Get Started.
+2. Add the donation or event ticket button to any page and change the color and text with ease.
+3. You can also use the donate button widget and customize the text and color and campaign.
+4. Philantro donation form triggered by the Philantro plugin for Wordpress.
+5. Screenshot of the Philantro donate process.
+6. Screenshot of the Philantro donate process at the billing stage.
+7. Screenshot of a completed donation.
+8. Philantro's nonprofit dashboard. When you register with Philantro, your nonprofit has access to insightful reporting, analytics and tools and more. Get Started.
 
 
 == Upgrade Notice == 
+
+= 1.5 =
+Now includes a widget that allows nonprofits to add a donate button and customize the color and text directly to the sidebar.
 
 = 1.3 = 
 Now includes Event. Sell event tickets and track purchaser and event analytics from the Philantro dashboard.
