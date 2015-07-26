@@ -14,9 +14,6 @@ Simple and secure donation form that enables you to accept one-time/recurring do
 Philantro is the all-inclusive donation platform for lean nonprofits. Accept donations securely, manage donors, sell event tickets, track donations and more. The Philantro plugin requires the organization to be registered with [Philantro](https://www.philantro.com).
 
 
-[youtube http://www.youtube.com/watch?v=rdK2ipgQ40w]
-
-
 
 = Nonprofits Grow with Philantro =
 
