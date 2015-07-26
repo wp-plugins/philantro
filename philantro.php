@@ -68,27 +68,25 @@ class Philantro_Widget extends WP_Widget {
         <p>
             <label style="padding-bottom:8px; display: block;" for="<?php echo $this->get_field_id( 'label' ); ?>"><?php _e( 'Button Text:' ); ?></label>
             <input class="widefat button-text" id="<?php echo $this->get_field_id( 'label' ); ?>" name="<?php echo $this->get_field_name( 'label' ); ?>" type="text" value="<?php echo esc_attr( $label ); ?>">
-        </p>
 
 
-        <div id="button-preview" style="margin-top:30px;">
             <a href="#_<?php if(!$campaign_ID): echo 'givealways'; else: echo $campaign_ID; endif; ?>" class="philantro-btn" style="background-color: <?php echo $color ?>; display: block;
-                padding: 17px;
-                text-align: center;
-                border-radius: 30px;
-                font-size: 16.25px;
-                font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-                text-indent: 45px;
-                text-decoration: none;
-                min-height: 20px;
-                color: rgb(255, 255, 255);
-                max-height: 62px;
-                min-width: 150px;
-                background-image: url(https://www.philantro.com/css/images/security-confirm.png);
-                background-position: 0% 50%;
-                background-repeat: no-repeat;"><?php echo $label ?></a>
-        </div>
+            padding: 17px;
+            text-align: center;
+            border-radius: 30px;
+            font-size: 16.25px;
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            text-indent: 45px;
+            text-decoration: none;
+            min-height: 20px;
+            color: rgb(255, 255, 255);
+            max-height: 62px;
+            min-width: 150px;
+            background-image: url(https://www.philantro.com/css/images/security-confirm.png);
+            background-position: 0% 50%;
+            background-repeat: no-repeat;"><?php echo $label ?></a>
 
+        </p>
 
         <div style="border-top:1px dotted #eaeaea; margin-top:30px; padding-top:10px;">
             <p style="color:#999;">To have the donate form open to a specific donation campaign, enter the Campaign ID below.</p>
@@ -186,9 +184,31 @@ function thisScreen() {
 function load_colors(){ ?>
     <script type="text/javascript">
 
+    jQuery('.color-selectored').minicolors('destroy');
+
+
+    jQuery('.color-selectored').minicolors({
+                                opacity: false,
+                                position: 'top right',
+                                defaultValue: '#3277A2',
+                                change: function(hex) {
+                                    if(!hex){
+                                        hex = '#3277a2';
+                                    }
+                                    jQuery(this).closest('p').next().find('.philantro-btn').css('background-color',hex);
+                                }
+    })
+
+
+
+    jQuery("#widget-list div[id*='_philantro-'] .widget-top").css({'background-color':'#3277a2', 'color':'#fff'});
+
+
+    if(jQuery( ".color-selectored" ).length ) {
+
+
+    jQuery(document).ajaxComplete(function() {
         jQuery('.color-selectored').minicolors('destroy');
-
-
         jQuery('.color-selectored').minicolors({
             opacity: false,
             position: 'top right',
@@ -197,67 +217,45 @@ function load_colors(){ ?>
                 if(!hex){
                     hex = '#3277a2';
                 }
-                jQuery('.philantro-btn').css('background-color',hex);
+                jQuery(this).closest('p').next().find('.philantro-btn').css('background-color',hex);
             }
         })
 
+    });
+
+    }
 
 
-        jQuery("#widget-list div[id*='_philantro-'] .widget-top").css({'background-color':'#3277a2', 'color':'#fff'});
+    function modify_button(thisObj){
+        var button_text = thisObj.val();
 
-
-        if(jQuery( ".color-selectored" ).length ) {
-
-
-            jQuery(document).ajaxComplete(function() {
-                jQuery('.color-selectored').minicolors('destroy');
-                jQuery('.color-selectored').minicolors({
-                    opacity: false,
-                    position: 'top right',
-                    defaultValue: '#3277A2',
-                    change: function(hex) {
-                        if(!hex){
-                            hex = '#3277a2';
-                        }
-                        jQuery('.philantro-btn').css('background-color',hex);
-                    }
-                })
-
-            });
-
+        if(!button_text){
+            button_text = 'Donate';
         }
 
-
-        function modify_button(thisObj){
-            var button_text = thisObj.val();
-
-            if(!button_text){
-                button_text = 'Donate';
-            }
-
-            jQuery('.philantro-btn').text(button_text);
-        }
+        jQuery(thisObj).next('.philantro-btn').text(button_text);
+    }
 
 
-        jQuery(document).on('keyup', '.button-text', function(){
-            modify_button(jQuery(this));
-        })
-        jQuery(document).on('change', '.button-text', function(){
-            modify_button(jQuery(this));
-        })
-        jQuery(document).on('click', '.button-text', function(){
-            modify_button(jQuery(this));
-        })
-        jQuery(document).on("paste",".button-text", function() {
-            modify_button(jQuery(this));
-        });
+    jQuery(document).on('keyup', '.button-text', function(){
+        modify_button(jQuery(this));
+    })
+    jQuery(document).on('change', '.button-text', function(){
+        modify_button(jQuery(this));
+    })
+    jQuery(document).on('click', '.button-text', function(){
+        modify_button(jQuery(this));
+    })
+    jQuery(document).on("paste",".button-text", function() {
+        modify_button(jQuery(this));
+    });
 
 
 
     </script>
 
 
-<?php
+ <?php
 }
 
 // Add Shortcode

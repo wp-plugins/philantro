@@ -212,7 +212,10 @@ position: relative;
     border-radius: 2px;
 
 }
-
+.widget-content .philantro-btn{
+    margin-top: 30px;
+    display: block;
+}
 #button-color-container .input-sm{
     margin-left: 38px;
     width: 120px;
