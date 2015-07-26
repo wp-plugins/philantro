@@ -44,7 +44,11 @@ class Philantro_Widget extends WP_Widget {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
         }
         // Use shortcodes in form like Landing Page Template.
-        echo do_shortcode( '[donate id="' . $instance['campaign_ID'] . '" label="'. $instance['label']  .'"  color="'. $instance['color']  .'"]' );
+
+        if($instance['campaign_ID']): $campaign_shortcode = 'id="' . $instance['campaign_ID']. '"'; else: $campaign_shortcode = null; endif;
+
+
+        echo do_shortcode( '[donate ' . $campaign_shortcode . 'label="'. $instance['label']  .'"  color="'. $instance['color']  .'"]' );
         echo $args['after_widget'];
     }
 
@@ -204,9 +208,6 @@ function load_colors(){ ?>
 
 
 
-    jQuery("#widget-list div[id*='_philantro-'] .widget-top").css({'background-color':'#3277a2', 'color':'#fff'});
-
-
     function removeP(){
         jQuery('.widget-content p').each(function() {
             var $this = jQuery(this);
@@ -215,21 +216,25 @@ function load_colors(){ ?>
         });
     }
 
+    jQuery("#widget-list div[id*='_philantro-'] .widget-top").css({'background-color':'#3277a2', 'color':'#fff'});
 
     removeP();
     loadColor();
 
 
-    if(jQuery( ".color-selectored" ).length ) {
+
 
 
     jQuery(document).ajaxComplete(function() {
-        removeP();
-        loadColor();
+
+        if(jQuery( ".color-selectored" ).length ) {
+            removeP();
+            loadColor();
+        }
 
     });
 
-    }
+
 
 
     function modify_button(thisObj){
