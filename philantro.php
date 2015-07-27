@@ -75,7 +75,7 @@ class Philantro_Widget extends WP_Widget {
 
 
             <a href="#_<?php if(!$campaign_ID): echo 'givealways'; else: echo $campaign_ID; endif; ?>" class="philantro-btn" style="background-color: <?php echo $color ?>; display: block;
-            padding: 17px;
+
             text-align: center;
             border-radius: 30px;
             font-size: 13.25px;
@@ -87,7 +87,9 @@ class Philantro_Widget extends WP_Widget {
             letter-spacing: 1px;
             min-height: 20px;
             color: rgb(255, 255, 255);
-            max-height: 62px;
+            max-height: 60px;
+            height: 60px;
+            line-height: 60px;
             min-width: 150px;
             background-image: url(https://www.philantro.com/css/images/security-confirm.png);
             background-position: 0% 50%;
