@@ -3,7 +3,7 @@
  * Plugin Name: Philantro
  * Plugin URI: http://www.philantro.com
  * Description: <strong>Philantro is a better way to accept donations.</strong><br/> To use Philantro, first <a href="https://www.philantro.com/sign-up">create a Philantro account</a>. Once you've logged in and completed your profile, you can begin accepting donations and selling event tickets with powerful analytics, two-day deposits and flexible reporting.
- * Version: 1.5.0
+ * Version: 1.5.1
  * Author: Philantro Inc.
  * Author URI: http://www.philantro.com
  * License: GPLv2
@@ -71,7 +71,7 @@ class Philantro_Widget extends WP_Widget {
 
         <p>
             <label style="padding-bottom:8px; display: block;" for="<?php echo $this->get_field_id( 'label' ); ?>"><?php _e( 'Button Text:' ); ?></label>
-            <input class="widefat button-text" id="<?php echo $this->get_field_id( 'label' ); ?>" name="<?php echo $this->get_field_name( 'label' ); ?>" type="text" value="<?php echo esc_attr( $label ); ?>">
+            <input class="widefat button-text" style="margin-bottom:30px;" id="<?php echo $this->get_field_id( 'label' ); ?>" name="<?php echo $this->get_field_name( 'label' ); ?>" type="text" value="<?php echo esc_attr( $label ); ?>">
 
 
             <a href="#_<?php if(!$campaign_ID): echo 'givealways'; else: echo $campaign_ID; endif; ?>" class="philantro-btn" style="background-color: <?php echo $color ?>; display: block;
@@ -91,7 +91,7 @@ class Philantro_Widget extends WP_Widget {
             height: 60px;
             line-height: 60px;
             min-width: 150px;
-            background-image: url(https://www.philantro.com/css/images/security-confirm.png);
+            background-image: url(https://s3-us-west-2.amazonaws.com/philantro/pdf/security-confirm.png);
             background-position: 0% 50%;
             background-repeat: no-repeat;"><?php echo $label ?></a>
 
@@ -205,8 +205,8 @@ function load_colors(){ ?>
                                             if(!hex){
                                                 hex = '#3277a2';
                                             }
-                                            jQuery(this).closest('p').nextAll().find('.philantro-btn').css('background-color',hex);
-                                            jQuery(this).closest('div').nextAll().find('.philantro-btn').css('background-color',hex);
+                                            jQuery(this).closest('p').nextAll().find('a').css('background-color',hex);
+                                            jQuery(this).closest('div').nextAll().find('a').css('background-color',hex);
                                         }
             })
         }
@@ -249,7 +249,7 @@ function load_colors(){ ?>
             button_text = 'Donate';
         }
 
-        jQuery(thisObj).next('.philantro-btn').text(button_text);
+        jQuery(thisObj).next('a').text(button_text);
     }
 
 
@@ -343,6 +343,29 @@ function event_shortcode( $atts ) {
 
     endif;
 }
+
+
+// Add Shortcode
+function fundraise_shortcode( $atts ) {
+
+    $EIN = get_option('EIN');
+
+    $id = 'null';
+
+    // Attributes
+    extract( shortcode_atts(
+            array(
+                'id' => 'null',
+            ), $atts )
+    );
+
+    if($id != 'null'):
+
+        return '<div class="philantro-progress" data-campaign="'. $id .'" data-EIN="'. $EIN .'"></div>';
+
+    endif;
+}
+
 
 
 
@@ -448,6 +471,7 @@ if (is_admin()) {
     add_action('admin_print_footer_scripts', 'load_colors' );
     add_shortcode( 'donate', 'donate_shortcode' );
     add_shortcode( 'event', 'event_shortcode' );
+    add_shortcode( 'fundraise', 'fundraise_shortcode' );
 //Add the button during admin init.
     add_action('init', 'create_philantro_button');
 
@@ -460,6 +484,7 @@ if (!is_admin()) {
     add_action('wp_footer', 'philantro');
     add_shortcode( 'donate', 'donate_shortcode' );
     add_shortcode( 'event', 'event_shortcode' );
+    add_shortcode( 'fundraise', 'fundraise_shortcode' );
 }
 
 
